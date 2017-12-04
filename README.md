@@ -1,9 +1,5 @@
 # Manageiq::Graphql::Client::Ruby
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/manageiq/graphql/client/ruby`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,17 +18,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To play around with this, open up a console:
 
-## Development
+```sh
+bin/console
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+And execute a sample query:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```ruby
+VmsQuery = Manageiq::Graphql::Client::Ruby::Client.parse <<-'GRAPHQL'
+query {
+  vms {
+    name
+  }
+}
+GRAPHQL
 
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/imtayadeway/manageiq-graphql-client-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Manageiq::Graphql::Client::Ruby::Client.query(VmsQuery) # => #<GraphQL::Client::Response:0x0000556d881473f0 @original_hash={"data"=>{"vms"=>[{"name"=>"vmdemods10"}, etc, etc...
+```
 
 ## License
 
