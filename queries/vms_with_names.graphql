@@ -1,0 +1,5 @@
+query {
+  vms {
+    name
+  }
+}
