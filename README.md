@@ -27,7 +27,7 @@ bin/console
 And execute a sample query:
 
 ```ruby
-VmsQuery = Manageiq::Graphql::Client::Ruby::Client.parse <<-'GRAPHQL'
+VmsQuery = Manageiq::Graphql::Client.parse <<-'GRAPHQL'
 query {
   vms {
     name
@@ -35,7 +35,7 @@ query {
 }
 GRAPHQL
 
-Manageiq::Graphql::Client::Ruby::Client.query(VmsQuery) # => #<GraphQL::Client::Response:0x0000556d881473f0 @original_hash={"data"=>{"vms"=>[{"name"=>"vmdemods10"}, etc, etc...
+Manageiq::Graphql::Client.query(VmsQuery) # => #<GraphQL::Client::Response:0x0000556d881473f0 @original_hash={"data"=>{"vms"=>[{"name"=>"vmdemods10"}, etc, etc...
 ```
 
 ## License
