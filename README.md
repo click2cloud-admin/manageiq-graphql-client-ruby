@@ -38,6 +38,12 @@ GRAPHQL
 Manageiq::Graphql::Client.query(VmsQuery) # => #<GraphQL::Client::Response:0x0000556d881473f0 @original_hash={"data"=>{"vms"=>[{"name"=>"vmdemods10"}, etc, etc...
 ```
 
+Execute a query pulled down from the server:
+
+```ruby
+Manageiq::Graphql::Client.query(Manageiq::Graphql::QueryRepository.find("GetVms")) # => # => #<GraphQL::Client::Response:0x0000556d881473f0 @original_hash={"data"=>{"vms"=>[{"name"=>"vmdemods10"}, etc, etc...
+```
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
