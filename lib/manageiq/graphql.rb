@@ -7,7 +7,7 @@ require "json"
 module Manageiq
   module Graphql
     HTTP = GraphQL::Client::HTTP.new("http://localhost:3001/graphql")
-    Schema = GraphQL::Client.load_schema(File.expand_path(File.join("..", "..", "config", "schema.json"), __dir__))
+    Schema = GraphQL::Client.load_schema(HTTP)
     Client = GraphQL::Client.new(schema: Schema, execute: HTTP)
 
     class QueryAdapter
