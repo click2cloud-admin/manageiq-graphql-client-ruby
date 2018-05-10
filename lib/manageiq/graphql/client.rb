@@ -4,8 +4,8 @@ require "graphql/client/http"
 require "net/http"
 require "json"
 
-module Manageiq
-  module Graphql
+module ManageIQ
+  module GraphQL
     class Client
       def self.endpoint
         @endpoint

@@ -5,7 +5,7 @@ require "manageiq/graphql/client/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "manageiq-graphql-client-ruby"
-  spec.version       = Manageiq::Graphql::Client::VERSION
+  spec.version       = ManageIQ::GraphQL::Client::VERSION
   spec.authors       = ["Tim Wade"]
   spec.email         = ["hello@timjwade.com"]
 
