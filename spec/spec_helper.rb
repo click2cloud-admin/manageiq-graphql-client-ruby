@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "manageiq/graphql/client/ruby"
+require "manageiq/graphql/client"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "manageiq/graphql/version"
+require "manageiq/graphql/client/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "manageiq-graphql-client-ruby"
-  spec.version       = Manageiq::Graphql::VERSION
+  spec.version       = Manageiq::Graphql::Client::VERSION
   spec.authors       = ["Tim Wade"]
   spec.email         = ["hello@timjwade.com"]
 

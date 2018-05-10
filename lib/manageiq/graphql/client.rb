@@ -1,4 +1,4 @@
-require "manageiq/graphql/version"
+require "manageiq/graphql/client/version"
 require "graphql/client"
 require "graphql/client/http"
 require "net/http"
